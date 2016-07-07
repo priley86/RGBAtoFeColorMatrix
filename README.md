@@ -16,7 +16,7 @@ You’ll need npm to install the dev dependencies. First make sure you have [nod
 
 To install the dependencies run:
 ```
-npm install
+npm install && bower install
 ```
 
 To start a server and sass compiler, run:

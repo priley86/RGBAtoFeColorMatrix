@@ -1,0 +1,17 @@
+{
+  "name": "RGBAtofeColorMatrix",
+  "description": "RGBA to feColorMatrix converter",
+  "main": "Gulpfile.js",
+  "license": "ISC",
+  "homepage": "https://github.com/priley86/RGBAtoFeColorMatrix",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.0"
+  }
+}

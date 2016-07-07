@@ -17,7 +17,6 @@ function getInputValue(id) {
 }
 
 // Apply the value to the color matrix preview.
-
 function rgbValues() {
   var rValue = parseInput('rValue');
   var gValue = parseInput('gValue');
@@ -32,27 +31,21 @@ function rgbValues() {
   return [rValue, gValue, bValue, aValue];
 }
 
-// Refresh the image with the new Matrix
-
-function buildMatrix(rgba) {
-  var matrix = '';
-  matrix = matrix + `${rgba[0]} 0 0 0 0 `;
-  matrix = matrix + `0 ${rgba[1]} 0 0 0 `;
-  matrix = matrix + `0 0 ${rgba[2]} 0 0 `;
-  matrix = matrix + `0 0 0 ${rgba[3]} 0 `;
-  return matrix;
-}
-
-var feColorMatrix = document.querySelector('feColorMatrix');
-
 window.onchange = function changeValue(){
-  var rgba = rgbValues();
-  var matrix = buildMatrix(rgba);
-  console.log(rgba);
-  console.log(matrix);
-  feColorMatrix.setAttribute('values', matrix);
+  var values = rgbValues();
+  console.log(values);
+  
+  document.querySelector('rgba-matrix').setMatrix(values);
+
   document.getElementById('selectedColor').style.backgroundColor = 'rgba(' + document.getElementById('rValue').value + ',' + document.getElementById('gValue').value + ',' + document.getElementById('bValue').value + ',' + document.getElementById('aValue').value + ')';
-}
+};
+
+
+//note, you can also expose attributes to individual values like this, as our element props are observed
+document.querySelector('rgba-matrix').r = 1;
+document.querySelector('rgba-matrix').g = 1;
+document.querySelector('rgba-matrix').b = 1;
+document.querySelector('rgba-matrix').a = 1;
 
 // TODO: Create a js library.
 
