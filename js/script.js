@@ -40,12 +40,11 @@ window.onchange = function changeValue(){
   document.getElementById('selectedColor').style.backgroundColor = 'rgba(' + document.getElementById('rValue').value + ',' + document.getElementById('gValue').value + ',' + document.getElementById('bValue').value + ',' + document.getElementById('aValue').value + ')';
 };
 
-
 //note, you can also expose attributes to individual values like this, as our element props are observed
-document.querySelector('rgba-matrix').r = 1;
-document.querySelector('rgba-matrix').g = 1;
-document.querySelector('rgba-matrix').b = 1;
-document.querySelector('rgba-matrix').a = 1;
+// document.querySelector('rgba-matrix').r = .5;
+// document.querySelector('rgba-matrix').g = .5;
+// document.querySelector('rgba-matrix').b = .5;
+// document.querySelector('rgba-matrix').a = 1;
 
 // TODO: Create a js library.
 
